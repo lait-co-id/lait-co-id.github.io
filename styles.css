@@ -14,8 +14,8 @@ body {
 
 /* Color Variables from Design Guide */
 :root {
-    --primary-red: #16AFBD;
-    --primary-green: #EC8433;
+    --primary-red: #f3413b;
+    --primary-green: #7fd324;
     --base-dark: #202020;
     --base-dark-2: #626262;
     --base-gray: #ACACAC;
@@ -42,6 +42,7 @@ body {
     z-index: 1000;
     padding: 1rem 0;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-red);
 }
 
 .nav-container {
@@ -77,13 +78,13 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: var(--base-dark);
+    color: var(--base-light);
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: var(--primary-red);
+    color: var(--primary-green);
 }
 
 /* Hero Section */
