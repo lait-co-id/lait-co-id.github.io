@@ -12,7 +12,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAIT - Leading Access to Integrated Ticketing</title>
+    <title>LAIT - Ticketing System</title>
     <link href="icon.png" rel="icon">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -20,44 +20,59 @@
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <nav class="nav">
-            <div class="nav-container">
-                <div class="logo">
-                    <img src="icon.png" alt="LAIT Logo" class="logo-img">
-                </div>
-                <div class="nav-links">
-                    <a href="#hero" class="nav-link">Home</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </div>
-            </div>
+        <div class="nav-container">
+        <div class="logo">
+        <img src="icon-text.png" alt="LAIT Logo" class="logo-img">
+        </div>
+        <div class="nav-links">
+            <a href="#hero" class="nav-link" data-i18n="nav_home">Home</a>
+            <a href="#project" class="nav-link" data-i18n="nav_project">Project</a>
+            <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+        </div>
+
+        <div class="lang-switch">
+            <a href="#" class="lang active" data-lang="en">EN</a>
+            <span>|</span>
+            <a href="#" class="lang" data-lang="id">ID</a>
+        </div>
+
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+        🌙
+        </button>
+        </div>
         </nav>
-        
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">Leading Access to Integrated Ticketing</h1>
-                <p class="hero-subtitle">Streamline your ticketing process with our comprehensive solution that integrates various ticketing systems and provides a unified interface for enhanced efficiency.</p>
+                <h1 class="hero-title" data-i18n="hero_title">Ticketing System</h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">LAIT (Leading Access to Integrated Ticketing) is an integrated ticket purchasing mechanism based on reward points, offering tourism benefits that are valid throughout Indonesia.</p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary">Get Started</button>
-                    <button class="btn btn-secondary">Learn More</button>
+                    <button class="btn btn-primary" data-i18n="btn_get_started">Get Started</button>
+                    <button class="btn btn-secondary" data-i18n="btn_learn_more">Learn More</button>
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="hero-card">
+                <div class="hero-slider">
+                    <img src="img/slide-1.png" class="hero-slide active" alt="Slide 1">
+                    <img src="img/slide-2.png" class="hero-slide" alt="Slide 2">
+                </div>
+                <!-- <div class="hero-card">
                     <div class="card-header">
                         <div class="card-icon"></div>
-                        <span>Unified Dashboard</span>
+                        <span data-i18n="dashboard">Unified Dashboard</span>
                     </div>
                     <div class="card-content">
                         <div class="metric">
                             <span class="metric-value">95%</span>
-                            <span class="metric-label">Efficiency Boost</span>
+                            <span class="metric-label" data-i18n="efficiency">Efficiency Boost</span>
                         </div>
                         <div class="metric">
                             <span class="metric-value">24/7</span>
-                            <span class="metric-label">Availability</span>
+                            <span class="metric-label" data-i18n="availability">Availability</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -66,33 +81,33 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">About LAIT</h2>
-                <p class="section-subtitle">Discover how LAIT revolutionizes ticket management for organizations worldwide</p>
+                <h2 class="section-title" data-i18n="about_title">About LAIT</h2>
+                <p class="section-subtitle" data-i18n="about_subtitle">Discover how LAIT revolutionizes ticket management for organizations worldwide</p>
             </div>
             
             <div class="about-grid">
                 <div class="about-content">
                     <div class="about-text">
-                        <h3>Our Mission</h3>
-                        <p>LAIT is a comprehensive solution designed to streamline the ticketing process for organizations. By integrating various ticketing systems and providing a unified interface, LAIT aims to enhance the efficiency and effectiveness of ticket management.</p>
+                        <h3 data-i18n="mission">Our Mission</h3>
+                        <p data-i18n="mission_desc">LAIT is a comprehensive solution designed to streamline the ticketing process for organizations. By integrating various ticketing systems and providing a unified interface, LAIT aims to enhance the efficiency and effectiveness of ticket management.</p>
                         
-                        <h3>Key Benefits</h3>
+                        <h3 data-i18n="benefits">Key Benefits</h3>
                         <ul class="benefits-list">
                             <li>
                                 <div class="benefit-icon"></div>
-                                <span>Unified interface across all ticketing systems</span>
+                                <span data-i18n="benefit_1">Unified interface across all ticketing systems</span>
                             </li>
                             <li>
                                 <div class="benefit-icon"></div>
-                                <span>Enhanced operational efficiency</span>
+                                <span data-i18n="benefit_2">Enhanced operational efficiency</span>
                             </li>
                             <li>
                                 <div class="benefit-icon"></div>
-                                <span>Streamlined workflow management</span>
+                                <span data-i18n="benefit_3">Streamlined workflow management</span>
                             </li>
                             <li>
                                 <div class="benefit-icon"></div>
-                                <span>Real-time analytics and reporting</span>
+                                <span data-i18n="benefit_4">Real-time analytics and reporting</span>
                             </li>
                         </ul>
                     </div>
@@ -152,14 +167,14 @@
         <div class="container">
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Ready to Transform Your Ticketing?</h3>
-                    <p>Get in touch with our team to learn more about how LAIT can revolutionize your organization's ticket management process.</p>
-                    <button class="btn btn-primary">Contact Us</button>
+                    <h3 data-i18n="contact_title">Ready to Transform Your Ticketing?</h3>
+                    <p data-i18n="contact_desc">Get in touch with our team to learn more about how LAIT can revolutionize your organization's ticket management process.</p>
+                    <button class="btn btn-primary" data-i18n="btn_contact">Contact Us</button>
                 </div>
                 <div class="contact-visual">
                     <div class="contact-card">
                         <div class="contact-icon"></div>
-                        <p>Join the growing community of organizations that trust LAIT for their ticketing needs.</p>
+                        <p data-i18n="contact_note">Join the growing community of organizations that trust LAIT for their ticketing needs.</p>
                     </div>
                 </div>
             </div>
@@ -167,5 +182,6 @@
     </section>
 
     <script src="script.js"></script>
+    <script src="lang.js"></script>
 </body>
 </html>

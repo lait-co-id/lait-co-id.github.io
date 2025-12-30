@@ -198,3 +198,51 @@ window.addEventListener('load', function() {
         document.body.style.opacity = '1';
     }, 100);
 });
+
+
+document.querySelectorAll('.lang').forEach(btn => {
+    btn.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelectorAll('.lang').forEach(l => l.classList.remove('active'));
+        btn.classList.add('active');
+
+        const lang = btn.textContent;
+        console.log('Bahasa:', lang);
+        // panggil fungsi translate di sini
+    });
+});
+
+
+// THEME CHANGE
+
+const toggleBtn = document.getElementById('theme-toggle');
+const body = document.body;
+
+// cek tema sebelumnya
+if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark');
+    toggleBtn.textContent = '🌞';
+}
+
+// toggle theme
+toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark');
+
+    const isDark = body.classList.contains('dark');
+    toggleBtn.textContent = isDark ? '🌞' : '🌙';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+
+
+// SLIDER
+
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.hero-slide');
+    let index = 0;
+
+    setInterval(() => {
+        slides[index].classList.remove('active');
+        index = (index + 1) % slides.length;
+        slides[index].classList.add('active');
+    }, 3000); // ganti slide tiap 3 detik
+});
