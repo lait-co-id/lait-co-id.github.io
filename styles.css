@@ -113,75 +113,155 @@ body {
     color: var(--base-dark);
 }
 
-/* Language switch di kanan */
-.lang-switch {
-    margin-left: auto;
+
+/* LANG AND THEME */
+
+.nav-actions {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    font-weight: 500;
+    gap: 12px;
 }
 
-.lang-switch span {
-    color: #ccc;
+/* LANGUAGE BUTTON */
+.lang-dropdown {
+    position: relative;
 }
 
-.lang-switch .lang {
-    text-decoration: none;
-    color: var(--base-dark-2);
-    transition: color 0.3s ease;
-}
-
-.lang-switch .lang:hover {
-    color: var(--base-dark);
-}
-
-.lang-switch .active {
-    color: var(--base-dark);
-    font-weight: 600;
-}
-
-
-
-/* wrapper kanan */
-.lang-switch {
-    margin-left: auto;
+.lang-btn {
     display: flex;
     align-items: center;
-    gap: 8px;
-}
+    gap: 6px;
 
-/* tombol tema */
-.theme-toggle {
-    margin-left: 16px;
-    background: none;
-    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+
+    border: 1px solid var(--base-light);       /* abu-abu tipis */
+    background-color: var(--base-light);      /* soft gray */
+
     cursor: pointer;
-    font-size: 18px;
-    line-height: 1;
-    transition: transform 0.2s ease;
+    font-weight: 600;
+    font-size: 14px;
+    color: #111827;
+
+    transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+    background-color: var(--base-light-gray);
+}
+
+.chevron {
+    font-size: 12px;
+    transform: rotate(180deg);
+}
+
+/* DROPDOWN MENU */
+.lang-menu {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 200px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.15);
+    display: none;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.lang-menu.show {
+    display: block;
+}
+
+.lang-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.lang-item:hover {
+    background: #f3f6ff;
+}
+
+.lang-item.active {
+    background: #eef2ff;
+}
+
+.lang-item small {
+    color: #666;
+}
+
+.check {
+    color: #4f46e5;
+    font-weight: bold;
+}
+
+.lang-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lang-item .check {
+    opacity: 0;
+    font-weight: bold;
+    color: #4f46e5;
+    transition: opacity 0.2s ease;
+}
+
+.lang-item.active .check {
+    opacity: 1;
+}
+
+/* THEME TOGGLE */
+:root {
+    --bg: #ffffff;
+    --text: #111827;
+}
+
+.dark {
+    --bg: #111827;
+    --text: #f9fafb;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+}
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 13px;
+    border-radius: 12px;
+
+    background-color: #e6e6e6;
+    border: 1px solid #e6e6e6;
+    color: #374151;
+
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 .theme-toggle:hover {
-    transform: scale(1.1);
+    background-color: #d1d5db;
 }
 
-/* mode gelap */
-body.dark {
-    background-color: #121212;
-    color: #f5f5f5;
+.theme-toggle:active {
+    transform: scale(0.95);
 }
 
-body.dark .nav-link,
-body.dark .lang {
-    color: #f5f5f5;
-}
 
-body.dark .nav-link:hover,
-body.dark .lang.active {
-    color: var(--base-dark);
-}
+
+/* LANG AND THEME END */
 
 
 
@@ -234,10 +314,10 @@ body.dark .lang.active {
 .hero-slider {
     position: relative;
     width: 100%;
-    max-width: 420px;
-    height: 280px;
+    max-width: 720px;   /* 560 → 720 */
+    height: 480px;      /* 380 → 480 */
     overflow: hidden;
-    border-radius: 16px;
+    border-radius: 20px; /* lebih halus */
 }
 
 /* slide image */

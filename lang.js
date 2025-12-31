@@ -62,10 +62,23 @@ const translations = {
     }
 };
 
-const langBtns = document.querySelectorAll('.lang');
-const i18nEls = document.querySelectorAll('[data-i18n]');
+/* ===============================
+   LANGUAGE DROPDOWN + I18N
+================================ */
 
+const langBtn   = document.getElementById('langBtn');
+const langMenu  = document.getElementById('langMenu');
+const langItems = document.querySelectorAll('.lang-item');
+const i18nEls   = document.querySelectorAll('[data-i18n]');
+
+/* Toggle dropdown */
+langBtn.addEventListener('click', () => {
+    langMenu.classList.toggle('show');
+});
+
+/* Set language function */
 function setLanguage(lang) {
+    // translate text
     i18nEls.forEach(el => {
         const key = el.dataset.i18n;
         if (translations[lang][key]) {
@@ -73,20 +86,30 @@ function setLanguage(lang) {
         }
     });
 
-    langBtns.forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
+    // update dropdown active
+    langItems.forEach(item => {
+        item.classList.toggle('active', item.dataset.lang === lang);
     });
+
+    // update button display
+    document.querySelector('.lang-code').textContent = lang.toUpperCase();
+    document.querySelector('.flag').textContent = lang === 'en' ? 'US' : 'ID';
 
     localStorage.setItem('language', lang);
 }
 
-// klik bahasa
-langBtns.forEach(btn => {
-    btn.addEventListener('click', e => {
+/* Click language item */
+langItems.forEach(item => {
+    item.addEventListener('click', e => {
         e.preventDefault();
-        setLanguage(btn.dataset.lang);
+        const lang = item.dataset.lang;
+
+        setLanguage(lang);
+        langMenu.classList.remove('show');
+
+        console.log('Language switched to:', lang);
     });
 });
 
-// set default
+/* Default language */
 setLanguage(localStorage.getItem('language') || 'en');

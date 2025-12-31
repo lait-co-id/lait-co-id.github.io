@@ -199,39 +199,22 @@ window.addEventListener('load', function() {
     }, 100);
 });
 
+/* THEME TOGGLE */
+const toggle = document.getElementById('theme-toggle');
+const sun = document.getElementById('icon-sun');
+const moon = document.getElementById('icon-moon');
 
-document.querySelectorAll('.lang').forEach(btn => {
-    btn.addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelectorAll('.lang').forEach(l => l.classList.remove('active'));
-        btn.classList.add('active');
+toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    const isDark = document.body.classList.contains('dark');
 
-        const lang = btn.textContent;
-        console.log('Bahasa:', lang);
-        // panggil fungsi translate di sini
-    });
+    sun.style.display = isDark ? 'inline' : 'none';
+    moon.style.display = isDark ? 'none' : 'inline';
 });
 
 
-// THEME CHANGE
+// LANG END
 
-const toggleBtn = document.getElementById('theme-toggle');
-const body = document.body;
-
-// cek tema sebelumnya
-if (localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark');
-    toggleBtn.textContent = '🌞';
-}
-
-// toggle theme
-toggleBtn.addEventListener('click', () => {
-    body.classList.toggle('dark');
-
-    const isDark = body.classList.contains('dark');
-    toggleBtn.textContent = isDark ? '🌞' : '🌙';
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-});
 
 
 // SLIDER

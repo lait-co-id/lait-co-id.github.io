@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6D2016TBXP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-6D2016TBXP');
     </script>
@@ -16,37 +17,82 @@
     <link href="icon.png" rel="icon">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <nav class="nav">
-        <div class="nav-container">
-        <div class="logo">
-        <img src="icon-text.png" alt="LAIT Logo" class="logo-img">
-        </div>
-        <div class="nav-links">
-            <a href="#hero" class="nav-link" data-i18n="nav_home">Home</a>
-            <a href="#project" class="nav-link" data-i18n="nav_project">Project</a>
-            <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
-        </div>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="icon-text.png" alt="LAIT Logo" class="logo-img">
+                </div>
+                <div class="nav-links">
+                    <a href="#hero" class="nav-link" data-i18n="nav_home">Home</a>
+                    <a href="#project" class="nav-link" data-i18n="nav_project">Project</a>
+                    <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+                </div>
+                <div class="nav-actions">
 
-        <div class="lang-switch">
-            <a href="#" class="lang active" data-lang="en">EN</a>
-            <span>|</span>
-            <a href="#" class="lang" data-lang="id">ID</a>
-        </div>
+                    <!-- Language Dropdown -->
+                    <div class="lang-dropdown">
+                        <button class="lang-btn" id="langBtn">
+                            <span class="flag">US</span>
+                            <span class="lang-code">EN</span>
+                            <span class="chevron">⌃</span>
+                        </button>
+
+                        <div class="lang-menu" id="langMenu">
+                            <div class="lang-item active" data-lang="en">
+                                <div>
+                                    <strong>English</strong><br>
+                                    <small>EN</small>
+                                </div>
+                                <span class="check">✓</span>
+                            </div>
+
+                            <div class="lang-item" data-lang="id">
+                                <div>
+                                    <strong>Bahasa</strong><br>
+                                    <small>ID</small>
+                                </div>
+                                <span class="check">✓</span>
+                            </div>
+                        </div>
+                    </div>
 
 
-        <!-- Theme Toggle -->
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
-        🌙
-        </button>
-        </div>
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+
+                        <!-- SUN -->
+                        <span id="icon-sun" style="display:none; transform: rotate(180deg);">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" />
+                            </svg>
+                        </span>
+
+                        <!-- MOON -->
+                        <span id="icon-moon">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                            </svg>
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
         </nav>
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="hero-title" data-i18n="hero_title">Ticketing System</h1>
-                <p class="hero-subtitle" data-i18n="hero_subtitle">LAIT (Leading Access to Integrated Ticketing) is an integrated ticket purchasing mechanism based on reward points, offering tourism benefits that are valid throughout Indonesia.</p>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">LAIT (Leading Access to Integrated Ticketing) is an
+                    integrated ticket purchasing mechanism based on reward points, offering tourism benefits that are
+                    valid throughout Indonesia.</p>
                 <div class="hero-buttons">
                     <button class="btn btn-primary" data-i18n="btn_get_started">Get Started</button>
                     <button class="btn btn-secondary" data-i18n="btn_learn_more">Learn More</button>
@@ -82,15 +128,19 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title" data-i18n="about_title">About LAIT</h2>
-                <p class="section-subtitle" data-i18n="about_subtitle">Discover how LAIT revolutionizes ticket management for organizations worldwide</p>
+                <p class="section-subtitle" data-i18n="about_subtitle">Discover how LAIT revolutionizes ticket
+                    management for organizations worldwide</p>
             </div>
-            
+
             <div class="about-grid">
                 <div class="about-content">
                     <div class="about-text">
                         <h3 data-i18n="mission">Our Mission</h3>
-                        <p data-i18n="mission_desc">LAIT is a comprehensive solution designed to streamline the ticketing process for organizations. By integrating various ticketing systems and providing a unified interface, LAIT aims to enhance the efficiency and effectiveness of ticket management.</p>
-                        
+                        <p data-i18n="mission_desc">LAIT is a comprehensive solution designed to streamline the
+                            ticketing process for organizations. By integrating various ticketing systems and providing
+                            a unified interface, LAIT aims to enhance the efficiency and effectiveness of ticket
+                            management.</p>
+
                         <h3 data-i18n="benefits">Key Benefits</h3>
                         <ul class="benefits-list">
                             <li>
@@ -112,26 +162,26 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="about-features">
                     <div class="feature-card">
                         <div class="feature-icon primary-bg"></div>
                         <h4>Integration</h4>
                         <p>Seamlessly connects multiple ticketing platforms into one cohesive system</p>
                     </div>
-                    
+
                     <div class="feature-card">
                         <div class="feature-icon secondary-bg"></div>
                         <h4>Efficiency</h4>
                         <p>Reduces manual work and automates routine ticketing processes</p>
                     </div>
-                    
+
                     <div class="feature-card">
                         <div class="feature-icon primary-bg"></div>
                         <h4>Analytics</h4>
                         <p>Provides comprehensive insights into ticket management performance</p>
                     </div>
-                    
+
                     <div class="feature-card">
                         <div class="feature-icon secondary-bg"></div>
                         <h4>Support</h4>
@@ -139,11 +189,13 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="value-proposition">
                 <h3>Why Choose LAIT?</h3>
-                <p>This microsite serves as a company profile for LAIT, showcasing its features, benefits, and use cases to potential clients and partners. The content is organized into sections that provide a comprehensive overview of LAIT's capabilities and value proposition.</p>
-                
+                <p>This microsite serves as a company profile for LAIT, showcasing its features, benefits, and use cases
+                    to potential clients and partners. The content is organized into sections that provide a
+                    comprehensive overview of LAIT's capabilities and value proposition.</p>
+
                 <div class="stats">
                     <div class="stat">
                         <span class="stat-number">500+</span>
@@ -168,13 +220,15 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <h3 data-i18n="contact_title">Ready to Transform Your Ticketing?</h3>
-                    <p data-i18n="contact_desc">Get in touch with our team to learn more about how LAIT can revolutionize your organization's ticket management process.</p>
+                    <p data-i18n="contact_desc">Get in touch with our team to learn more about how LAIT can
+                        revolutionize your organization's ticket management process.</p>
                     <button class="btn btn-primary" data-i18n="btn_contact">Contact Us</button>
                 </div>
                 <div class="contact-visual">
                     <div class="contact-card">
                         <div class="contact-icon"></div>
-                        <p data-i18n="contact_note">Join the growing community of organizations that trust LAIT for their ticketing needs.</p>
+                        <p data-i18n="contact_note">Join the growing community of organizations that trust LAIT for
+                            their ticketing needs.</p>
                     </div>
                 </div>
             </div>
@@ -184,4 +238,5 @@
     <script src="script.js"></script>
     <script src="lang.js"></script>
 </body>
+
 </html>
