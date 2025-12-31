@@ -71,9 +71,12 @@ const langMenu  = document.getElementById('langMenu');
 const langItems = document.querySelectorAll('.lang-item');
 const i18nEls   = document.querySelectorAll('[data-i18n]');
 
+const chevron = langBtn.querySelector('.chevron');
 /* Toggle dropdown */
 langBtn.addEventListener('click', () => {
-    langMenu.classList.toggle('show');
+    const isOpen = langMenu.classList.toggle('show');
+        // ubah arah chevron
+    chevron.classList.toggle('up', isOpen);
 });
 
 /* Set language function */
@@ -94,6 +97,9 @@ function setLanguage(lang) {
     // update button display
     document.querySelector('.lang-code').textContent = lang.toUpperCase();
     document.querySelector('.flag').textContent = lang === 'en' ? 'US' : 'ID';
+
+    // reset chevron ke samping
+        chevron.classList.remove('up');
 
     localStorage.setItem('language', lang);
 }

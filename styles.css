@@ -5,17 +5,13 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #202020;
-    background-color: #ffffff;
-}
-
 /* Color Variables from Design Guide */
 :root {
+    /* Brand Colors */
     --primary-red: #f3413b;
     --primary-green: #7fd324;
+
+    /* Base Colors */
     --base-dark: #202020;
     --base-dark-2: #626262;
     --base-gray: #ACACAC;
@@ -23,7 +19,57 @@ body {
     --base-light: #E6E6E6;
     --base-lighter: #F8F8F8;
     --white: #FFFFFF;
+
+    /* UI Semantic */
+    --bg: #FFFFFF;
+    --bg-secondary: #F8F8F8;
+    --card-bg: #FFFFFF;
+    --border: #E6E6E6;
+
+    --text: #202020;
+    --text-muted: #626262;
+    --text-light: #ACACAC;
+
+    --btn-bg: #E6E6E6;
+    --btn-text: #202020;
 }
+
+
+.dark {
+    /* Backgrounds */
+    --bg: #202020;
+    --bg-secondary: #111827;
+    --card-bg: #262626;
+    --border: #333333;
+
+    /* Text */
+    --base-dark-2: #F8F8F8;
+    --base-dark: #ACACAC;
+    --base-light-gray: #CACACA;
+    --base-light: #333333;
+    --base-lighter: #333333;
+    --text: #F8F8F8;
+    --text-muted: #CACACA;
+    --text-light: #ACACAC;
+
+    /* Buttons */
+    --btn-bg: #333333;
+    --btn-text: #F8F8F8;
+
+    /* Brand (sedikit disesuaikan agar nyaman di dark) */
+    --primary-red: #ff5c56;
+    --primary-green: #8ee63a;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--bg);
+    transition: background 0.3s, color 0.3s;
+}
+
+
 
 .container {
     max-width: 1200px;
@@ -42,7 +88,7 @@ body {
     z-index: 1000;
     padding: 1rem 0;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-    background-color: var(--white);
+    background-color: var(--bg);
 }
 
 .nav-container {
@@ -141,7 +187,7 @@ body {
     cursor: pointer;
     font-weight: 600;
     font-size: 14px;
-    color: #111827;
+    color: var(--base-dark);
 
     transition: all 0.2s ease;
 }
@@ -152,7 +198,14 @@ body {
 
 .chevron {
     font-size: 12px;
-    transform: rotate(180deg);
+    margin-left: 6px;
+    transition: transform 0.25s ease;
+    color: var(--base-dark);
+}
+
+/* dropdown terbuka */
+.chevron.up {
+    transform: rotate(-90deg); /* dari kanan → atas */
 }
 
 /* DROPDOWN MENU */
@@ -161,7 +214,7 @@ body {
     top: 120%;
     left: 0;
     width: 200px;
-    background: #fff;
+    background: var(--bg);
     border-radius: 12px;
     box-shadow: 0 12px 30px rgba(0,0,0,.15);
     display: none;
@@ -182,11 +235,11 @@ body {
 }
 
 .lang-item:hover {
-    background: #f3f6ff;
+    background: var(--bg-secondary);
 }
 
 .lang-item.active {
-    background: #eef2ff;
+    background: var(--bg-secondary);
 }
 
 .lang-item small {
@@ -216,21 +269,7 @@ body {
 }
 
 /* THEME TOGGLE */
-:root {
-    --bg: #ffffff;
-    --text: #111827;
-}
 
-.dark {
-    --bg: #111827;
-    --text: #f9fafb;
-}
-
-body {
-    background: var(--bg);
-    color: var(--text);
-    transition: background 0.3s, color 0.3s;
-}
 
 .theme-toggle {
     display: inline-flex;
@@ -240,8 +279,8 @@ body {
     padding: 7px 13px;
     border-radius: 12px;
 
-    background-color: #e6e6e6;
-    border: 1px solid #e6e6e6;
+    background-color: var(--base-light);
+    border: 1px solid var(--base-light);
     color: #374151;
 
     cursor: pointer;
@@ -249,6 +288,16 @@ body {
     font-weight: 600;
 
     transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+/* Saat animasi diputar */
+.theme-toggle.rotate span {
+    transform: rotate(360deg);
+}
+
+/* Sun khusus */
+#icon-sun {
+    color: #facc15; /* yellow-400 */
 }
 
 .theme-toggle:hover {
@@ -268,7 +317,7 @@ body {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--base-lighter) 0%, var(--white) 100%);
+    background: linear-gradient(135deg, var(--base-lighter) 0%, var(--bg) 100%);
     display: flex;
     align-items: center;
     padding-top: 80px;
@@ -287,7 +336,7 @@ body {
 .hero-title {
     font-size: 3.5rem;
     font-weight: bold;
-    color: var(--base-dark);
+    color: var(--text);
     margin-bottom: 1.5rem;
     line-height: 1.2;
 }
@@ -427,7 +476,7 @@ body {
 /* About Section */
 .about {
     padding: 6rem 0;
-    background: white;
+    background: var(--bg);
 }
 
 .section-header {
@@ -438,13 +487,13 @@ body {
 .section-title {
     font-size: 2.5rem;
     font-weight: bold;
-    color: var(--base-dark);
+    color: var(--text);
     margin-bottom: 1rem;
 }
 
 .section-subtitle {
     font-size: 1.2rem;
-    color: var(--base-dark-2);
+    color: var(--text);
     max-width: 600px;
     margin: 0 auto;
 }
@@ -458,7 +507,7 @@ body {
 
 .about-content h3 {
     font-size: 1.5rem;
-    color: var(--base-dark);
+    color: var(--text);
     margin-bottom: 1rem;
     margin-top: 2rem;
 }

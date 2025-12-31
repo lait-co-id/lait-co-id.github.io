@@ -200,16 +200,32 @@ window.addEventListener('load', function() {
 });
 
 /* THEME TOGGLE */
-const toggle = document.getElementById('theme-toggle');
-const sun = document.getElementById('icon-sun');
-const moon = document.getElementById('icon-moon');
+const themeToggle = document.getElementById('theme-toggle');
+const iconSun = document.getElementById('icon-sun');
+const iconMoon = document.getElementById('icon-moon');
+const body = document.body;
 
-toggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    const isDark = document.body.classList.contains('dark');
+themeToggle.addEventListener('click', () => {
+    // trigger rotate animation
+    themeToggle.classList.add('rotate');
 
-    sun.style.display = isDark ? 'inline' : 'none';
-    moon.style.display = isDark ? 'none' : 'inline';
+    setTimeout(() => {
+        themeToggle.classList.remove('rotate');
+    }, 200);
+
+    // toggle icon
+    const isDark = document.body.classList.toggle('dark');
+    console.log(isDark);
+
+    if (isDark) {
+        iconSun.style.display = 'inline-flex';
+        iconMoon.style.display = 'none';
+        body.classList.add('dark');
+    } else {
+        iconSun.style.display = 'none';
+        iconMoon.style.display = 'inline-flex';
+        body.classList.remove('dark');
+    }
 });
 
 
