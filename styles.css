@@ -689,6 +689,18 @@ body {
     line-height: 1.6;
 }
 
+.feature-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #fff;
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
