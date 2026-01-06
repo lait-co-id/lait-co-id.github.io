@@ -1239,6 +1239,11 @@ body.dark .logo-img {
 
     .store-badges {
         justify-content: center;
-        gap: 16px;
+        gap: 10px;
+    }
+
+    .store-badges img {
+        height: 30px;
+        cursor: pointer;
     }
 }
