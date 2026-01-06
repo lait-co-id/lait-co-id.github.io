@@ -95,10 +95,12 @@ html { scroll-behavior: smooth; }
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    display: flex;
+    position: relative;
+    padding: 16px 32px;
 }
 
 .logo {
@@ -140,13 +142,6 @@ body.dark .logo-img {
 
 .nav {
     width: 100%;
-}
-
-.nav-container {
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding: 16px 32px;
 }
 
 /* logo tetap kiri */
@@ -324,6 +319,76 @@ body.dark .logo-img {
     transform: scale(0.95);
 }
 
+/* ================= BURGER ================= */
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 24px;
+    height: 2px;
+    background: var(--base-dark);
+    border-radius: 2px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+    /* burger visible */
+    .burger {
+        display: flex;
+    }
+
+    /* menu hidden */
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg);
+        flex-direction: column;
+        align-items: center;
+        padding: 32px 0;
+        gap: 32px;
+
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: 0.3s ease;
+    }
+
+    /* open state */
+    .nav.nav-open .nav-menu {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    /* nav links stacked */
+    .nav-links {
+        position: static;
+        transform: none;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    /* actions stacked */
+    .nav-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 24px; /* JARAK DARI NAV LINKS */
+    }
+}
+
+
+
+
 
 
 /* LANG AND THEME END */
@@ -491,7 +556,6 @@ body.dark .logo-img {
 
 /* About Section */
 .about {
-    padding: 6rem 0;
     background: var(--bg);
 }
 
@@ -603,11 +667,14 @@ body.dark .logo-img {
 }
 
 /* Value Proposition */
+.proposition {
+    margin-bottom: 2.5rem;
+}
 .value-proposition {
     background: linear-gradient(135deg, #b30000, #e60000);
     border-radius: 24px;
-    padding: 28px 40px;
-    max-width: 900px;
+    padding: 32px 40px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -668,10 +735,11 @@ body.dark .logo-img {
 
 /* Project List */
 .project-list {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
-    flex-wrap: wrap;
+    width: 60%;
+    margin: 0 auto;
 }
 
 /* Project Card */
@@ -683,8 +751,7 @@ body.dark .logo-img {
     border: 2px solid #e11d48;
     border-radius: 20px;
     background: #ffffff;
-    min-width: 320px;
-    max-width: 420px;
+    width: 100%;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -695,14 +762,14 @@ body.dark .logo-img {
 
 /* Logo */
 .project-logo img {
-    width: 72px;
-    height: 72px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
 }
 
 /* Project Info */
 .project-info h3 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     margin: 0 0 4px;
     color: #111827;
@@ -710,7 +777,7 @@ body.dark .logo-img {
 
 .project-subtitle {
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     color: #6b7280;
     margin-bottom: 12px;
 }
@@ -718,16 +785,20 @@ body.dark .logo-img {
 /* Store Badges */
 .store-badges {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 .store-badges img {
-    height: 34px;
+    height: 40px;
     cursor: pointer;
 }
 
 
 @media (max-width: 640px) {
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+
     .project-card {
         flex-direction: column;
         text-align: center;
@@ -738,6 +809,10 @@ body.dark .logo-img {
     }
 }
 
+.strategic-partnership {
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+}
 
 .partner-section {
     padding: 60px 0;
@@ -871,13 +946,18 @@ body.dark .logo-img {
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;   /* text di tengah */
+        gap: 20px;             /* jarak antar link */
+        width: 100%;
     }
     
     .hero-content {
         grid-template-columns: 1fr;
         gap: 2rem;
         text-align: center;
+        margin-top: 10%;
     }
     
     .hero-title {
@@ -937,15 +1017,25 @@ body.dark .logo-img {
 
 
 @media (max-width: 768px) {
+
+    /* nav tetap horizontal */
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .burger {
+        margin-right: 50px;
+    }
+
+    /* nav links di dalam menu */
     .nav-links {
         position: static;
         transform: none;
         justify-content: center;
         width: 100%;
         margin-top: 12px;
-    }
-
-    .nav-container {
         flex-direction: column;
     }
 }

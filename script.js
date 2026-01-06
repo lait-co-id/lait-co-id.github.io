@@ -140,53 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.boxShadow = '';
         });
     });
-    
-    // Mobile menu toggle (for future enhancement)
-    function addMobileMenu() {
-        const nav = document.querySelector('.nav-container');
-        const mobileToggle = document.createElement('button');
-        mobileToggle.className = 'mobile-toggle';
-        mobileToggle.innerHTML = '☰';
-        mobileToggle.style.cssText = `
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--base-dark);
-            cursor: pointer;
-        `;
-        
-        // Add mobile styles
-        const mobileStyle = document.createElement('style');
-        mobileStyle.textContent = `
-            @media (max-width: 768px) {
-                .mobile-toggle {
-                    display: block !important;
-                }
-                .nav-links.mobile-open {
-                    display: flex !important;
-                    position: absolute;
-                    top: 100%;
-                    left: 0;
-                    right: 0;
-                    background: white;
-                    flex-direction: column;
-                    padding: 1rem;
-                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-                }
-            }
-        `;
-        document.head.appendChild(mobileStyle);
-        
-        nav.appendChild(mobileToggle);
-        
-        mobileToggle.addEventListener('click', function() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('mobile-open');
-        });
-    }
-    
-    addMobileMenu();
+
 });
 
 // Add loading animation
@@ -230,9 +184,12 @@ themeToggle.addEventListener('click', () => {
 
 
 // LANG END
+const burger = document.getElementById('burgerBtn');
+const nav = document.querySelector('.nav');
 
-
-
+burger.addEventListener('click', () => {
+    nav.classList.toggle('nav-open');
+});
 // SLIDER
 
 document.addEventListener('DOMContentLoaded', () => {
