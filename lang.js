@@ -13,40 +13,50 @@ const translations = {
         efficiency: "Efficiency Boost",
         availability: "Availability",
 
-        about_title: "About LAIT",
-        about_subtitle: "Discover how LAIT revolutionizes ticket management for organizations worldwide",
+        about_title: "LAIT Features",
+        about_subtitle: "Discover how the LAIT Ticketing System delivers convenience and ease for its users",
+
         mission: "Our Mission",
         mission_desc: "LAIT is a comprehensive solution designed to streamline the ticketing process for organizations.",
         benefits: "Key Benefits",
 
         benefit_1: "Unified interface across all ticketing systems",
         benefit_2: "Enhanced operational efficiency",
-        benefit_3: "Streamlined workflow management",
-        benefit_4: "Real-time analytics and reporting",
+        benefit_3: "Available in major tourist cities",
+        benefit_4: "Reward points remain valid as long as the user uses the application",
+        benefit_5: "24/7 customer service support",
+
 
         contact_title: "Ready to Transform Your Ticketing?",
         contact_desc: "Get in touch with our team to learn more about how LAIT can revolutionize your organization's ticket management process.",
         btn_contact: "Contact Us",
         contact_note: "Join the growing community of organizations that trust LAIT for their ticketing needs.",
 
-        feature_integration_title: "Integration",
-        feature_integration_desc: "Seamlessly connects multiple ticketing platforms into one cohesive system",
+        service_pass_title: "Travel Pass Tickets",
+        service_pass_desc: "Provides transport travel pass tickets available on a daily, weekly, and monthly basis.",
 
-        feature_efficiency_title: "Efficiency",
-        feature_efficiency_desc: "Reduces manual work and automates routine ticketing processes",
+        service_reward_title: "Reward Points",
+        service_reward_desc: "Earn reward points with every transport ticket purchase and each ticket scan.",
 
-        feature_analytics_title: "Analytics",
-        feature_analytics_desc: "Provides comprehensive insights into ticket management performance",
+        service_tourism_title: "Tourist Attraction Integration",
+        service_tourism_desc: "Offers various tourist attraction tickets across Indonesia, where reward points can be used as ticket discounts.",
 
-        feature_support_title: "Support",
-        feature_support_desc: "24/7 dedicated support to ensure smooth operations",
+        service_payment_title: "Multiple Payment Methods",
+        service_payment_desc: "Supports various payment methods for ticket purchases, including QRIS, Virtual Account, Debit, and Credit Card.",
+
+        our_project_title: "Our Project",
+        our_project_desc: "We are proud that LAIT Ticketing has been used in several major cities in Indonesia",
+        partnership_title: "Strategic Partnership",
+        partnership_desc: "We are proud to collaborate with leading institutions and innovators to build the future of integrated, easy, and efficient transportation",
 
         value_title: "Why Choose LAIT?",
         value_desc: "This microsite serves as a company profile for LAIT, showcasing its features, benefits, and use cases to potential clients and partners. The content is organized into sections that provide a comprehensive overview of LAIT's capabilities and value proposition.",
 
-        stat_organizations: "Organizations Served",
-        stat_satisfaction: "Customer Satisfaction",
-        stat_support: "Support Available",
+        stat_projects: "Trans Project",
+        stat_attraction: "Tourist Attraction",
+        stat_users: "User",
+        stat_support: "Support"
+
 
     },
 
@@ -64,40 +74,51 @@ const translations = {
         efficiency: "Peningkatan Efisiensi",
         availability: "Ketersediaan",
 
-        about_title: "Tentang LAIT",
-        about_subtitle: "Temukan bagaimana LAIT merevolusi manajemen ticketing untuk organisasi di seluruh dunia",
+        about_title: "Fitur LAIT",
+        about_subtitle: "Temukan bagaimana Sistem Ticketing LAIT memberikan kemudahan bagi para penggunanya",
+
         mission: "Misi Kami",
         mission_desc: "LAIT adalah solusi komprehensif yang dirancang untuk menyederhanakan proses ticketing organisasi.",
         benefits: "Manfaat Utama",
 
         benefit_1: "Antarmuka terpadu untuk semua sistem ticketing",
         benefit_2: "Meningkatkan efisiensi operasional",
-        benefit_3: "Manajemen alur kerja yang lebih sederhana",
-        benefit_4: "Analitik dan laporan real-time",
+        benefit_3: "Tersedia di beberapa kota wisata besar",
+        benefit_4: "Poin tetap berlaku selama pengguna masih menggunakan aplikasi",
+        benefit_5: "Dukungan Customer Service 24/7",
+
 
         contact_title: "Siap Mengubah Sistem Ticketing Anda?",
         contact_desc: "Hubungi tim kami untuk mengetahui bagaimana LAIT dapat merevolusi manajemen ticketing organisasi Anda.",
         btn_contact: "Hubungi Kami",
         contact_note: "Bergabunglah dengan organisasi yang telah mempercayakan sistem ticketing mereka kepada LAIT.",
 
-        feature_integration_title: "Integrasi",
-        feature_integration_desc: "Menghubungkan berbagai platform tiket secara mulus dalam satu sistem terpadu",
+        service_pass_title: "Tiket Terusan",
+        service_pass_desc: "Menyediakan tiket terusan transportasi baik harian, mingguan, hingga bulanan.",
 
-        feature_efficiency_title: "Efisiensi",
-        feature_efficiency_desc: "Mengurangi pekerjaan manual dan mengotomatiskan proses tiket rutin",
+        service_reward_title: "Poin Reward",
+        service_reward_desc: "Dapatkan poin pada setiap pembelian tiket transportasi dan pada setiap scan tiket.",
 
-        feature_analytics_title: "Analitik",
-        feature_analytics_desc: "Menyediakan wawasan menyeluruh terhadap kinerja manajemen tiket",
+        service_tourism_title: "Integrasi Obyek Wisata",
+        service_tourism_desc: "Terdapat berbagai tiket obyek wisata di seluruh Indonesia, dan poin reward dapat digunakan sebagai potongan tiket obyek wisata.",
 
-        feature_support_title: "Dukungan",
-        feature_support_desc: "Dukungan khusus 24/7 untuk memastikan operasional berjalan lancar",
+        service_payment_title: "Beragam Metode Pembayaran",
+        service_payment_desc: "Menyediakan berbagai metode pembayaran pembelian tiket, mulai dari QRIS, Virtual Account, Debit, dan Credit Card.",
+
+        our_project_title: "Our Project",
+        our_project_desc: "Kami bangga Ticketing LAIT sudah digunakan di beberapa kota besar Indonesia",
+        partnership_title: "Strategic Partnership",
+        partnership_desc: "Kami bangga berkolaborasi dengan para instansi dan inovator terkemuka untuk membangun masa depan mode transportasi yang terintegrasi, mudah, dan efisien",
+
+
 
         value_title: "Mengapa Memilih LAIT?",
         value_desc: "Microsite ini berfungsi sebagai profil perusahaan LAIT yang menampilkan fitur, manfaat, dan studi penggunaan kepada calon klien dan mitra. Konten disusun dalam beberapa bagian untuk memberikan gambaran menyeluruh mengenai kapabilitas dan nilai unggulan LAIT.",
 
-        stat_organizations: "Organisasi yang Dilayani",
-        stat_satisfaction: "Kepuasan Pelanggan",
-        stat_support: "Dukungan Tersedia",
+        stat_projects: "Proyek Transportasi",
+        stat_attraction: "Objek Wisata",
+        stat_users: "Pengguna",
+        stat_support: "Dukungan"
 
 
 
@@ -110,16 +131,16 @@ const translations = {
    LANGUAGE DROPDOWN + I18N
 ================================ */
 
-const langBtn   = document.getElementById('langBtn');
-const langMenu  = document.getElementById('langMenu');
+const langBtn = document.getElementById('langBtn');
+const langMenu = document.getElementById('langMenu');
 const langItems = document.querySelectorAll('.lang-item');
-const i18nEls   = document.querySelectorAll('[data-i18n]');
+const i18nEls = document.querySelectorAll('[data-i18n]');
 
 const chevron = langBtn.querySelector('.chevron');
 /* Toggle dropdown */
 langBtn.addEventListener('click', () => {
     const isOpen = langMenu.classList.toggle('show');
-        // ubah arah chevron
+    // ubah arah chevron
     chevron.classList.toggle('up', isOpen);
 });
 
@@ -143,7 +164,7 @@ function setLanguage(lang) {
     document.querySelector('.flag').textContent = lang === 'en' ? 'US' : 'ID';
 
     // reset chevron ke samping
-        chevron.classList.remove('up');
+    chevron.classList.remove('up');
 
     localStorage.setItem('language', lang);
 }
