@@ -1,0 +1,58 @@
+{
+  "Nav": {
+    "home": "Beranda",
+    "project": "Proyek",
+    "contact": "Kontak"
+  },
+  "Hero": {
+    "title": "Sistem Ticketing",
+    "subtitle": "LAIT (Leading Access to Integrated Ticketing) merupakan mekanisme pembelian tiket terusan berbasis poin reward sebagai manfaat wisata yang berlaku di seluruh Indonesia.",
+    "getStarted": "Lihat Proyek Kami",
+    "learnMore": "Hubungi Kami"
+  },
+  "Features": {
+    "title": "Fitur LAIT",
+    "subtitle": "Temukan bagaimana Sistem Ticketing LAIT memberikan kemudahan bagi para penggunanya",
+    "keyBenefits": "Manfaat Utama",
+    "benefit1": "Antarmuka terpadu untuk semua sistem ticketing",
+    "benefit2": "Meningkatkan efisiensi operasional",
+    "benefit3": "Tersedia di beberapa kota wisata besar",
+    "benefit4": "Poin tetap berlaku selama pengguna masih menggunakan aplikasi",
+    "benefit5": "Dukungan Customer Service 24/7",
+    "travelPassTitle": "Tiket Terusan",
+    "travelPassDesc": "Menyediakan tiket terusan transportasi baik harian, mingguan, hingga bulanan.",
+    "rewardPointsTitle": "Poin Reward",
+    "rewardPointsDesc": "Dapatkan poin pada setiap pembelian tiket transportasi dan pada setiap scan tiket.",
+    "tourismTitle": "Integrasi Obyek Wisata",
+    "tourismDesc": "Terdapat berbagai tiket obyek wisata di seluruh Indonesia, dan poin reward dapat digunakan sebagai potongan tiket obyek wisata.",
+    "paymentTitle": "Beragam Metode Pembayaran",
+    "paymentDesc": "Menyediakan berbagai metode pembayaran pembelian tiket, mulai dari QRIS, Virtual Account, Debit, dan Credit Card."
+  },
+  "Stats": {
+    "projects": "Proyek Transportasi",
+    "attractions": "Objek Wisata",
+    "users": "Pengguna",
+    "support": "Dukungan"
+  },
+  "Projects": {
+    "title": "Our Project",
+    "subtitle": "Kami bangga Ticketing LAIT sudah digunakan di beberapa kota besar Indonesia"
+  },
+  "Partners": {
+    "title": "Strategic Partnership",
+    "subtitle": "Kami bangga berkolaborasi dengan para instansi dan inovator terkemuka untuk membangun masa depan mode transportasi yang terintegrasi, mudah, dan efisien"
+  },
+  "Contact": {
+    "title": "Siap Mengubah Sistem Ticketing Anda?",
+    "desc": "Hubungi tim kami untuk mengetahui bagaimana LAIT dapat merevolusi manajemen ticketing organisasi Anda.",
+    "button": "Hubungi Kami",
+    "note": "Bergabunglah dengan organisasi yang telah mempercayakan sistem ticketing mereka kepada LAIT."
+  },
+  "Footer": {
+    "desc": "LAIT (Leading Access to Integrated Ticketing) merupakan mekanisme pembelian tiket terusan berbasis poin reward sebagai manfaat wisata yang berlaku di seluruh Indonesia.",
+    "rights": "© 2026 LAIT. Hak cipta dilindungi.",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat Layanan",
+    "contactUs": "Hubungi Kami"
+  }
+}

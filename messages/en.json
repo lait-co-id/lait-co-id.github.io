@@ -1,0 +1,58 @@
+{
+  "Nav": {
+    "home": "Home",
+    "project": "Project",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "title": "Ticketing System",
+    "subtitle": "LAIT (Leading Access to Integrated Ticketing) is an integrated ticket purchasing mechanism based on reward points, offering tourism benefits that are valid throughout Indonesia.",
+    "getStarted": "View Our Project",
+    "learnMore": "Get in Touch"
+  },
+  "Features": {
+    "title": "LAIT Features",
+    "subtitle": "Discover how the LAIT Ticketing System delivers convenience and ease for its users",
+    "keyBenefits": "Key Benefits",
+    "benefit1": "Unified interface across all ticketing systems",
+    "benefit2": "Enhanced operational efficiency",
+    "benefit3": "Available in major tourist cities",
+    "benefit4": "Reward points remain valid as long as the user uses the application",
+    "benefit5": "24/7 customer service support",
+    "travelPassTitle": "Travel Pass Tickets",
+    "travelPassDesc": "Provides transport travel pass tickets available on a daily, weekly, and monthly basis.",
+    "rewardPointsTitle": "Reward Points",
+    "rewardPointsDesc": "Earn reward points with every transport ticket purchase and each ticket scan.",
+    "tourismTitle": "Tourist Attraction Integration",
+    "tourismDesc": "Offers various tourist attraction tickets across Indonesia, where reward points can be used as ticket discounts.",
+    "paymentTitle": "Multiple Payment Methods",
+    "paymentDesc": "Supports various payment methods for ticket purchases, including QRIS, Virtual Account, Debit, and Credit Card."
+  },
+  "Stats": {
+    "projects": "Trans Project",
+    "attractions": "Tourist Attraction",
+    "users": "User",
+    "support": "Support"
+  },
+  "Projects": {
+    "title": "Our Project",
+    "subtitle": "We are proud that LAIT Ticketing has been used in several major cities in Indonesia"
+  },
+  "Partners": {
+    "title": "Strategic Partnership",
+    "subtitle": "We are proud to collaborate with leading institutions and innovators to build the future of integrated, easy, and efficient transportation"
+  },
+  "Contact": {
+    "title": "Ready to Transform Your Ticketing?",
+    "desc": "Get in touch with our team to learn more about how LAIT can revolutionize your organization's ticket management process.",
+    "button": "Contact Us",
+    "note": "Join the growing community of organizations that trust LAIT for their ticketing needs."
+  },
+  "Footer": {
+    "desc": "LAIT (Leading Access to Integrated Ticketing) is an integrated ticket purchasing mechanism based on reward points, offering tourism benefits that are valid throughout Indonesia.",
+    "rights": "© 2026 LAIT. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contactUs": "Contact Us"
+  }
+}
