@@ -65,7 +65,7 @@ export default function Navbar() {
       <div className="container mx-auto px-6 lg:px-8 flex items-center justify-between">
         
         {/* LOGO */}
-        <Link href="#hero" className="relative z-50 flex items-center gap-3">
+        <Link href="/" className="relative z-50 flex items-center gap-3">
           {mounted && resolvedTheme === 'dark' ? (
             <Image src="/images/icon-text-white.png" alt="LAIT Logo" width={120} height={30} className="h-7 w-auto" priority />
           ) : (

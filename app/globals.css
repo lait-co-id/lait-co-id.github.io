@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-brand-red: #f3413b;
+  --color-brand-green: #7fd324;
+  
+  --color-base-dark: #202020;
+  --color-base-dark-2: #626262;
+  --color-base-gray: #ACACAC;
+  --color-base-light-gray: #CACACA;
+  --color-base-light: #E6E6E6;
+  --color-base-lighter: #F8F8F8;
+  
+  --animate-scroll: scroll 20s linear infinite;
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #202020;
+  
+  --bg-secondary: #F8F8F8;
+  --card-bg: #FFFFFF;
+  --border: #E6E6E6;
+  --text-muted: #626262;
+  --text-light: #ACACAC;
+  --btn-bg: #E6E6E6;
+  --btn-text: #202020;
+}
+
+.dark {
+  --background: #202020;
+  --foreground: #F8F8F8;
+  
+  --bg-secondary: #111827;
+  --card-bg: #262626;
+  --border: #333333;
+  --text-muted: #CACACA;
+  --text-light: #ACACAC;
+  --btn-bg: #333333;
+  --btn-text: #F8F8F8;
+  
+  --color-brand-red: #ff5c56;
+  --color-brand-green: #8ee63a;
+  
+  --color-base-dark: #ACACAC;
+  --color-base-dark-2: #F8F8F8;
+  --color-base-light: #333333;
+  --color-base-lighter: #333333;
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}

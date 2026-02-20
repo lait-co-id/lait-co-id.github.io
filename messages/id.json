@@ -54,5 +54,41 @@
     "privacy": "Kebijakan Privasi",
     "terms": "Syarat Layanan",
     "contactUs": "Hubungi Kami"
+  },
+  "Privacy": {
+    "title": "Kebijakan Privasi",
+    "subtitle": "Pembaruan terakhir: 20 Februari 2026",
+    "intro": "LAIT (\"kami\" atau \"Platform\") menghormati privasi Anda dan berkomitmen untuk melindungi data pribadi Anda.",
+    "collectTitle": "Informasi yang Kami Kumpulkan",
+    "collectDesc": "Kami mengumpulkan informasi akun (nama, email), data tiket, dan data lokasi opsional untuk fitur transit.",
+    "useTitle": "Penggunaan Data Anda",
+    "useDesc": "Untuk memfasilitasi pembelian tiket, mengelola poin reward, menyediakan rute transit, dan memastikan kompetisi yang adil.",
+    "notCollectTitle": "Data yang TIDAK Kami Kumpulkan",
+    "notCollectDesc": "Kami tidak menyimpan detail kartu pembayaran lengkap, pesan pribadi, atau rute aktivitas yang tidak dibagikan.",
+    "thirdPartyTitle": "Layanan Pihak Ketiga",
+    "thirdPartyDesc": "Kami berintegrasi dengan gateway pembayaran dan operator transportasi yang memiliki kebijakan data masing-masing.",
+    "storageTitle": "Penyimpanan & Retensi Data",
+    "storageDesc": "Data disimpan dengan aman dan hanya selama diperlukan untuk menyediakan layanan atau mematuhi hukum.",
+    "rightsTitle": "Hak Pengguna",
+    "rightsDesc": "Anda berhak untuk mengakses, memperbaiki, mengekspor, atau menghapus data pribadi Anda kapan saja.",
+    "contactTitle": "Hubungi Kami",
+    "contactDesc": "Untuk pertanyaan terkait privasi, hubungi privacy@lait.co.id."
+  },
+  "Terms": {
+    "title": "Syarat Layanan",
+    "subtitle": "Pembaruan terakhir: 20 Februari 2026",
+    "intro": "Harap baca syarat ini dengan saksama sebelum menggunakan platform LAIT.",
+    "acceptanceTitle": "Penerimaan Syarat",
+    "acceptanceDesc": "Dengan membuat akun atau menggunakan layanan kami, Anda setuju untuk terikat dengan syarat ini.",
+    "accountTitle": "Tanggung Jawab Akun",
+    "accountDesc": "Anda bertanggung jawab untuk menjaga kerahasiaan kredensial akun Anda dan semua aktivitas di bawah akun Anda.",
+    "ticketsTitle": "Tiket & Reward",
+    "ticketsDesc": "Tiket tunduk pada syarat operator. Poin reward memiliki masa berlaku dan ketentuan khusus untuk penukarannya.",
+    "conductTitle": "Tindakan yang Dilarang",
+    "conductDesc": "Anda setuju untuk tidak menyalahgunakan platform, melakukan transaksi penipuan, atau melanggar hukum yang berlaku.",
+    "liabilityTitle": "Batasan Tanggung Jawab",
+    "liabilityDesc": "LAIT disediakan \"sebagaimana adanya\" tanpa jaminan. Kami tidak bertanggung jawab atas keterlambatan transportasi atau kegagalan pihak ketiga.",
+    "changesTitle": "Perubahan Syarat",
+    "changesDesc": "Kami berhak mengubah syarat ini kapan saja. Penggunaan berkelanjutan menyiratkan penerimaan syarat yang diperbarui."
   }
 }
