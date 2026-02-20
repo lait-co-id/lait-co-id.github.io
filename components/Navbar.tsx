@@ -109,34 +109,37 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
                   transition={{ duration: 0.15 }}
-                  className="absolute right-0 top-full mt-2 w-48 bg-background rounded-xl shadow-xl border border-border overflow-hidden origin-top-right"
+                  className="absolute right-0 top-full mt-2 w-48 rounded-xl shadow-xl border border-gray-800/50 dark:border-white/50 overflow-hidden origin-top-right"
                 >
-                  <button
-                    onClick={() => switchLocale('en')}
-                    className={cn(
-                      "w-full flex items-center justify-between px-4 py-3 text-left hover:bg-bg-secondary transition-colors",
-                      locale === 'en' && "bg-bg-secondary"
-                    )}
-                  >
-                    <div>
-                      <div className="font-semibold text-foreground">English</div>
-                      <div className="text-xs text-text-muted">EN</div>
-                    </div>
-                    {locale === 'en' && <Check className="w-4 h-4 text-brand-red" />}
-                  </button>
-                  <button
-                    onClick={() => switchLocale('id')}
-                    className={cn(
-                      "w-full flex items-center justify-between px-4 py-3 text-left hover:bg-bg-secondary transition-colors",
-                      locale === 'id' && "bg-bg-secondary"
-                    )}
-                  >
-                    <div>
-                      <div className="font-semibold text-foreground">Bahasa</div>
-                      <div className="text-xs text-text-muted">ID</div>
-                    </div>
-                    {locale === 'id' && <Check className="w-4 h-4 text-brand-red" />}
-                  </button>
+                  <div className="absolute inset-0 bg-white/90 dark:bg-[#333]/90 backdrop-blur-3xl backdrop-saturate-150 pointer-events-none pt-[1px]" />
+                  <div className="relative flex">
+                    <button
+                      onClick={() => switchLocale('en')}
+                      className={cn(
+                        "w-full flex items-center justify-between px-4 py-3 text-left hover:bg-foreground/5 transition-colors",
+                        locale === 'en' && "bg-foreground/5"
+                      )}
+                    >
+                      <div>
+                        <div className="font-semibold text-foreground">English</div>
+                        <div className="text-xs text-text-muted">EN</div>
+                      </div>
+                      {locale === 'en' && <Check className="w-4 h-4 text-brand-red" />}
+                    </button>
+                    <button
+                      onClick={() => switchLocale('id')}
+                      className={cn(
+                        "w-full flex items-center justify-between px-4 py-3 text-left hover:bg-foreground/5 transition-colors",
+                        locale === 'id' && "bg-foreground/5"
+                      )}
+                    >
+                      <div>
+                        <div className="font-semibold text-foreground">Bahasa</div>
+                        <div className="text-xs text-text-muted">ID</div>
+                      </div>
+                      {locale === 'id' && <Check className="w-4 h-4 text-brand-red" />}
+                    </button>
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>
