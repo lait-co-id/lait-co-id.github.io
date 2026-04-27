@@ -8,7 +8,7 @@ export async function GET() {
         namespace: "android_app",
         package_name: "com.lait.mobile",
         sha256_cert_fingerprints: [
-          "B5:CD:A7:28:90:3F:8E:DB:B1:C1:A4:4E:91:21:1A:38:64:3F:8A:F4:79:B8:C7:E9:9B:4C:94:4L" // Placeholder or leave as is if they inject it
+          "6D:A2:C7:B1:EB:B4:DC:3C:BB:48:5D:27:2C:9F:80:00:2E:83:A5:90:D7:D1:23:A8:0E:26:04:0E:11:B9:A9:7B"
         ]
       }
     }
