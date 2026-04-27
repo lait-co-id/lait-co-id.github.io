@@ -1,0 +1,5 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "com.lait.mobile",
+               "sha256_cert_fingerprints": ["6D:A2:C7:B1:EB:B4:DC:3C:BB:48:5D:27:2C:9F:80:00:2E:83:A5:90:D7:D1:23:A8:0E:26:04:0E:11:B9:A9:7B"] }
+}]
