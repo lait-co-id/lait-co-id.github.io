@@ -5,8 +5,9 @@ import {
   Shield, Database, Lock, Eye, Trash2, Download,
   CheckCircle, XCircle, MapPin, Bell, Smartphone,
   CreditCard, Users, Server, Key, Mail, RefreshCw,
-  Activity, BarChart3, QrCode, AlertCircle
+  Activity, BarChart3, QrCode, AlertCircle, ArrowLeft
 } from 'lucide-react';
+import Link from 'next/link';
 
 function Section({ number, icon, title, children }: {
   number?: number;
@@ -233,7 +234,7 @@ export default async function PrivacyPage(props: { params: Promise<{ locale: str
                 { icon: <RefreshCw className="w-4 h-4" />, label: isId ? 'Koreksi' : 'Correction', desc: isId ? 'Perbaiki data yang tidak akurat' : 'Fix inaccurate information' },
                 { icon: <Trash2 className="w-4 h-4" />, label: isId ? 'Penghapusan' : 'Deletion', desc: isId ? 'Hapus akun & semua data Anda' : 'Delete your account & all data' },
                 { icon: <Download className="w-4 h-4" />, label: isId ? 'Ekspor' : 'Export', desc: isId ? 'Unduh data dalam format portabel' : 'Download data in portable format' },
-                { icon: <XCircle className="w-4 h-4" />, label: isId ? 'Keberatan' : 'Objection', desc: isId ? 'Tolak penggunaan data tertentu' : 'Object to certain data uses' },
+                { icon: <Trash2 className="w-4 h-4" />, label: isId ? 'Keberatan / Hapus' : 'Objection / Delete', desc: isId ? 'Tolak penggunaan atau hapus data tertentu' : 'Object to or delete certain data uses' },
                 { icon: <Lock className="w-4 h-4" />, label: isId ? 'Batasan' : 'Restriction', desc: isId ? 'Batasi pemrosesan data Anda' : 'Limit how we process your data' },
               ].map((right, i) => (
                 <div key={i} className="flex items-start gap-3 p-3 bg-background rounded-xl border border-border">
@@ -245,12 +246,28 @@ export default async function PrivacyPage(props: { params: Promise<{ locale: str
                 </div>
               ))}
             </div>
-            <p className="text-sm mt-3">
+            <div className="grid sm:grid-cols-2 gap-4 mt-6">
+              <Link href={`/${locale}/privacy/delete-data`} className="flex items-center justify-between p-4 bg-brand-red/5 border border-brand-red/20 rounded-xl hover:bg-brand-red/10 transition-colors group">
+                <div className="flex items-center gap-3">
+                  <Database className="w-5 h-5 text-brand-red" />
+                  <span className="font-semibold text-sm">{isId ? 'Panduan Hapus Data' : 'Data Deletion Guide'}</span>
+                </div>
+                <ArrowLeft className="w-4 h-4 text-brand-red rotate-180 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link href={`/${locale}/privacy/delete-account`} className="flex items-center justify-between p-4 bg-brand-red/5 border border-brand-red/20 rounded-xl hover:bg-brand-red/10 transition-colors group">
+                <div className="flex items-center gap-3">
+                  <Trash2 className="w-5 h-5 text-brand-red" />
+                  <span className="font-semibold text-sm">{isId ? 'Panduan Hapus Akun' : 'Account Deletion Guide'}</span>
+                </div>
+                <ArrowLeft className="w-4 h-4 text-brand-red rotate-180 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+            <p className="text-sm mt-6">
               {isId
                 ? 'Untuk menggunakan hak Anda, kirimkan email ke '
                 : 'To exercise your rights, email us at '}
               <a href="mailto:privacy@lait.co.id" className="text-brand-red font-medium hover:underline">privacy@lait.co.id</a>
-              {isId ? ' atau hapus akun langsung dari pengaturan aplikasi.' : ' or delete your account directly from the app settings.'}
+              {isId ? ' atau hapus akun/data langsung dari pengaturan aplikasi.' : ' or delete your account/data directly from the app settings.'}
             </p>
           </Section>
 
