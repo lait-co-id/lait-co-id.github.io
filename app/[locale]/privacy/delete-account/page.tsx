@@ -2,7 +2,7 @@ import { setRequestLocale } from 'next-intl/server';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import {
-  Shield, Trash2, AlertCircle, ArrowLeft, Mail, Info, LogOut
+  Trash2, AlertCircle, ArrowLeft, Mail, Info, LogOut
 } from 'lucide-react';
 import Link from 'next/link';
 
