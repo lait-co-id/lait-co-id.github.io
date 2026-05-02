@@ -61,7 +61,7 @@ export default async function PrivacyPage(props: { params: Promise<{ locale: str
 
   const t = {
     title: isId ? 'Kebijakan Privasi' : 'Privacy Policy',
-    effectiveDate: isId ? 'Berlaku sejak: 20 Februari 2026' : 'Effective date: February 20, 2026',
+    effectiveDate: isId ? 'Berlaku sejak: 2 Mei 2026' : 'Effective date: May 2, 2026',
     intro: isId
       ? 'LAIT ("kami", "platform kami") menghormati privasi Anda. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, mengungkapkan, dan melindungi informasi Anda saat Anda menggunakan aplikasi seluler LAIT dan layanan terkait, termasuk fitur tiket terusan, poin reward, wisata, pelacak aktivitas lari, dan manajemen akun.'
       : 'LAIT ("we," "us," or "our") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the LAIT mobile application and related services, including travel pass ticketing, reward points, tourism, run activity tracking, and account management features.',
@@ -111,9 +111,10 @@ export default async function PrivacyPage(props: { params: Promise<{ locale: str
 
             <p className="font-medium text-foreground mt-4">{isId ? 'c. Data Aktivitas & Kebugaran (Lait Run)' : 'c. Activity & Fitness Data (Lait Run)'}</p>
             <ul className="space-y-1 ml-2">
-              <CheckItem green>{isId ? 'Jarak tempuh, durasi, kecepatan rata-rata lari' : 'Running distance, duration, average pace'}</CheckItem>
-              <CheckItem green>{isId ? 'Rute GPS (hanya saat aktivitas berlangsung)' : 'GPS route data (only during active sessions)'}</CheckItem>
-              <CheckItem green>{isId ? 'Data sinkronisasi Strava (jika terhubung, hanya dengan izin eksplisit)' : 'Strava sync data (if connected, only with explicit consent)'}</CheckItem>
+              <CheckItem green>{isId ? 'Jarak tempuh, durasi, kecepatan rata-rata, dan jumlah langkah (pedometer)' : 'Running distance, duration, average pace, and step count (pedometer)'}</CheckItem>
+              <CheckItem green>{isId ? 'Rute GPS (termasuk saat aplikasi di latar belakang selama sesi aktif)' : 'GPS route data (including while in background during active sessions)'}</CheckItem>
+              <CheckItem green>{isId ? 'Jenis aktivitas fisik (berlari, berjalan, atau berhenti) untuk fitur auto-pause' : 'Physical activity type (running, walking, or stationary) for auto-pause features'}</CheckItem>
+              <CheckItem green>{isId ? 'Data verifikasi integritas untuk kompetisi lari virtual' : 'Integrity verification data for virtual running competitions'}</CheckItem>
               <CheckItem green>{isId ? 'Catatan harian (Diary) yang Anda tulis' : 'Personal diary entries you write'}</CheckItem>
               <CheckItem green>{isId ? 'Partisipasi event dan tantangan lari' : 'Event and running challenge participation'}</CheckItem>
             </ul>
@@ -172,12 +173,12 @@ export default async function PrivacyPage(props: { params: Promise<{ locale: str
           <Section number={4} icon={<MapPin className="w-5 h-5" />}
             title={isId ? 'Data Lokasi' : 'Location Data'}>
             <p>{isId
-              ? 'LAIT meminta akses lokasi hanya ketika Anda secara aktif menggunakan fitur pelacakan lari atau rute transit. Kami tidak melacak lokasi Anda di latar belakang tanpa izin eksplisit Anda.'
-              : 'LAIT requests location access only when you actively use run tracking or transit routing features. We do not track your location in the background without your explicit permission.'}</p>
+              ? 'LAIT meminta akses lokasi hanya ketika Anda secara aktif menggunakan fitur pelacakan lari atau rute transit. Untuk fitur pelacakan lari, kami memerlukan akses lokasi di latar belakang agar rute Anda tetap tercatat dengan akurat saat layar ponsel dimatikan atau saat Anda menggunakan aplikasi lain selama sesi lari berlangsung.'
+              : 'LAIT requests location access only when you actively use run tracking or transit routing features. For run tracking, we require background location access to ensure your route is recorded accurately even when your screen is off or you are using other apps during an active session.'}</p>
             <div className="flex flex-wrap gap-2 mt-2">
               <Tag><MapPin className="w-3 h-3" /> {isId ? 'GPS aktif saat lari' : 'Active GPS during runs'}</Tag>
-              <Tag><Smartphone className="w-3 h-3" /> {isId ? 'Izin diminta saat dibutuhkan' : 'Permission requested when needed'}</Tag>
-              <Tag><XCircle className="w-3 h-3" /> {isId ? 'Tanpa pelacakan latar belakang' : 'No background tracking'}</Tag>
+              <Tag><Smartphone className="w-3 h-3" /> {isId ? 'Lokasi Latar Belakang (Opsional)' : 'Background Location (Optional)'}</Tag>
+              <Tag><Activity className="w-3 h-3" /> {isId ? 'Hanya selama sesi aktif' : 'Only during active sessions'}</Tag>
             </div>
           </Section>
 
