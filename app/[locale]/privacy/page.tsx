@@ -118,6 +118,11 @@ export default async function PrivacyPage(props: { params: Promise<{ locale: str
               <CheckItem green>{isId ? 'Catatan harian (Diary) yang Anda tulis' : 'Personal diary entries you write'}</CheckItem>
               <CheckItem green>{isId ? 'Partisipasi event dan tantangan lari' : 'Event and running challenge participation'}</CheckItem>
             </ul>
+            <div className="mt-3 p-3 bg-brand-red/5 border border-brand-red/10 rounded-lg text-sm text-text-muted">
+              <strong>{isId ? 'Catatan tentang Izin Aktivitas Fisik:' : 'Note on Physical Activity Permission:'}</strong> {isId 
+                ? 'Izin pendeteksi aktivitas (Activity Recognition) bersifat opsional untuk perekaman lari harian guna memberikan analitik lari yang lebih lengkap. Izin ini baru menjadi wajib jika Anda mengikuti event kompetisi lari yang membutuhkan verifikasi integritas anti-kecurangan.'
+                : 'Activity Recognition (step and movement detection) permission is completely optional for daily run tracking, used to provide comprehensive analytics. This permission only becomes required when participating in official event competitions that demand strict anti-fraud integrity verification.'}
+            </div>
 
             <p className="font-medium text-foreground mt-4">{isId ? 'd. Data Perangkat & Teknis' : 'd. Device & Technical Data'}</p>
             <ul className="space-y-1 ml-2">
