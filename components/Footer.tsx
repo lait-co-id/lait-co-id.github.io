@@ -59,6 +59,7 @@ export default function Footer() {
             <h3 className="text-white font-semibold text-lg mb-2">Legal</h3>
             <Link href="/privacy" className="text-[#9ca3af] hover:text-white transition-colors">{t('privacy')}</Link>
             <Link href="/terms" className="text-[#9ca3af] hover:text-white transition-colors">{t('terms')}</Link>
+            <Link href="/support" className="text-[#9ca3af] hover:text-white transition-colors">Support</Link>
           </div>
 
         </div>
