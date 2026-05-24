@@ -4,7 +4,8 @@
     "namespace": "android_app",
     "package_name": "com.lait.mobile",
     "sha256_cert_fingerprints": [
-      "6D:A2:C7:B1:EB:B4:DC:3C:BB:48:5D:27:2C:9F:80:00:2E:83:A5:90:D7:D1:23:A8:0E:26:04:0E:11:B9:A9:7B"
+      "6D:A2:C7:B1:EB:B4:DC:3C:BB:48:5D:27:2C:9F:80:00:2E:83:A5:90:D7:D1:23:A8:0E:26:04:0E:11:B9:A9:7B",
+      "E2:E0:05:B5:FB:CA:7A:21:1B:33:B0:2F:5C:86:29:CE:2E:77:4E:BF:B7:F5:64:27:3B:63:EE:82:E1:FF:89:20"
     ]
   }
 }]
