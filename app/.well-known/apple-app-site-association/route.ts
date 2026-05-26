@@ -6,13 +6,21 @@ export async function GET() {
       apps: [],
       details: [
         {
-          appID: "A6D021FC-0713-40A2-B1B1-ABC3EA476E3F.com.lait.mobile",
+          appIDs: ["4Z2SY3X2BW.com.lait.mobile"],
           paths: [
+            "/home",
             "/events/*",
             "/runs/*",
             "/merchant/*",
             "/badge/*",
-            "/routes/*"
+            "/routes/*",
+            "/share/*",
+            "/profile/*",
+            "/payment/*",
+            "/payment-failed*",
+            "/events/payment-status*",
+            "/events/payment-failed*",
+            "/events/*/welcome-runner*"
           ]
         }
       ]

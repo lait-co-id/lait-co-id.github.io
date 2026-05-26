@@ -1,0 +1,67 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["4Z2SY3X2BW.com.lait.mobile"],
+        "paths": [
+          "/home",
+          "/events/*",
+          "/runs/*",
+          "/merchant/*",
+          "/badge/*",
+          "/routes/*",
+          "/share/*",
+          "/profile/*",
+          "/payment/*",
+          "/payment-failed*",
+          "/events/payment-status*",
+          "/events/payment-failed*",
+          "/events/*/welcome-runner*"
+        ],
+        "components": [
+          {
+            "/": "/home",
+            "comment": "Home entry"
+          },
+          {
+            "/": "/events/*",
+            "comment": "Events + registration/payment status flows"
+          },
+          {
+            "/": "/runs/*",
+            "comment": "Run tracking and run details"
+          },
+          {
+            "/": "/merchant/*",
+            "comment": "Merchant pages"
+          },
+          {
+            "/": "/badge/*",
+            "comment": "Badge pages"
+          },
+          {
+            "/": "/routes/*",
+            "comment": "Route pages"
+          },
+          {
+            "/": "/share/*",
+            "comment": "Share pages"
+          },
+          {
+            "/": "/profile/*",
+            "comment": "Profile pages"
+          },
+          {
+            "/": "/payment/*",
+            "comment": "Payment detail deeplink pages"
+          },
+          {
+            "/": "/payment-failed*",
+            "comment": "Payment failed recovery page"
+          }
+        ]
+      }
+    ]
+  }
+}
