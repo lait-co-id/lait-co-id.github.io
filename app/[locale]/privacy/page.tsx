@@ -225,9 +225,9 @@ export default async function PrivacyPage(props: { params: Promise<{ locale: str
             <ul className="space-y-2">
               <CheckItem green>{isId ? 'Data disimpan di server aman dengan enkripsi saat transit (TLS) dan saat penyimpanan.' : 'Data is stored on secure servers with encryption in transit (TLS) and at rest.'}</CheckItem>
               <CheckItem green>{isId ? 'Data akun disimpan selama akun Anda aktif.' : 'Account data is retained while your account is active.'}</CheckItem>
-              <CheckItem green>{isId ? 'Data transaksi disimpan selama 5 tahun untuk keperluan akuntansi dan hukum.' : 'Transaction data is kept for 5 years for accounting and legal requirements.'}</CheckItem>
+              <CheckItem green>{isId ? 'Catatan transaksi keuangan (selama 5 tahun sesuai hukum) dan log pencegahan penipuan yang dianonimkan akan tetap disimpan.' : 'Financial transaction records (retained for 5 years as required by law) and anonymized fraud-prevention logs will be kept.'}</CheckItem>
               <CheckItem green>{isId ? 'Data aktivitas lari dan diary disimpan selama Anda menggunakan layanan.' : 'Run activity and diary data is retained as long as you use the service.'}</CheckItem>
-              <CheckItem green>{isId ? 'Setelah penghapusan akun, semua data pribadi dihapus dalam 30 hari.' : 'Upon account deletion, all personal data is erased within 30 days.'}</CheckItem>
+              <CheckItem green>{isId ? 'Setelah penghapusan akun, semua data pribadi dihapus atau dianonimkan sesuai kebijakan privasi kami.' : 'Upon account deletion, all personal data is erased or anonymized according to our privacy policy.'}</CheckItem>
             </ul>
           </Section>
 

@@ -100,7 +100,7 @@ export default async function DeleteAccountGuidePage(props: { params: Promise<{ 
             </li>
             <li className="flex gap-3 items-start">
               <Info className="w-5 h-5 text-brand-red shrink-0 mt-0.5" />
-              <span className="text-text-muted">{isId ? 'Catatan transaksi keuangan akan tetap disimpan selama 5 tahun sesuai hukum yang berlaku.' : 'Financial transaction records will be retained for 5 years as required by law.'}</span>
+              <span className="text-text-muted">{isId ? 'Catatan transaksi keuangan (selama 5 tahun sesuai hukum) dan log pencegahan penipuan yang dianonimkan akan tetap disimpan.' : 'Financial transaction records (for 5 years as required by law) and anonymized fraud-prevention logs will be retained.'}</span>
             </li>
           </ul>
         </div>
